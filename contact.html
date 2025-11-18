@@ -1,10 +1,255 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Usaid Hussain</title>
-<link rel="stylesheet" href="styles.css">
+<!-- Embedded CSS for a single, self-contained file -->
+<style>
+/**
+ * Stylesheet: Enhanced Contact Page
+ * Palette: Charcoal (#141414), Bright Yellow (#FFD700), Neon Green (#39FF14), Pure Black (#000000)
+ */
+
+/* --- GLOBAL STYLES & FONT --- */
+body {
+    background-color: #141414; /* Deep Charcoal Background */
+    color: #E5E5E5; /* Light Grey for main content text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: #39FF14; /* Neon Green links */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #FFD700; /* Yellow hover effect */
+    text-decoration: underline;
+}
+
+h1, h2 {
+    color: #39FF14; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- TOP AND BOTTOM BANNERS (New) --- */
+.site-header, .site-footer {
+    background-color: #000000; /* Pure Black Banner */
+    color: #FFD700;
+    padding: 15px 20px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+/* --- NAVIGATION --- */
+.site-header {
+    border-bottom: 3px solid #39FF14;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center navigation links */
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: #FFD700; /* Navigation links are yellow */
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    color: #39FF14; /* Hover turns them green */
+}
+
+
+/* --- MAIN CONTENT WRAPPER (Centered) --- */
+.content-wrapper {
+    flex-grow: 1; 
+    max-width: 1000px; 
+    margin: 0 auto; /* Center the entire main content block */
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- TITLE SECTION --- */
+.skills-page-title {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.skills-page-title h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.8);
+}
+
+.skills-page-title p {
+    color: #FFD700;
+    font-size: 1.1em;
+}
+
+/* --- CONTACT GRID LAYOUT --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 800px) {
+    .contact-grid {
+        grid-template-columns: 2fr 1fr; /* Form takes 2/3, details takes 1/3 */
+    }
+}
+
+/* --- CARD STYLING --- */
+.skill-card {
+    background-color: #1a1a1a; /* Dark card background */
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #FFD700; /* Yellow accent stripe */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card-heading {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* --- FORM STYLING --- */
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #FFD700; /* Yellow label text */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #0d0d0d; /* Very dark input background */
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #E5E5E5;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #39FF14; /* Neon green focus ring */
+    box-shadow: 0 0 0 3px rgba(57, 255, 20, 0.4);
+    outline: none;
+}
+
+.contact-form button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background-color: #39FF14; /* Neon Green Button */
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-transform: uppercase;
+}
+
+.contact-form button:hover {
+    background-color: #FFD700; /* Gold hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+}
+
+/* --- DETAILS STYLING --- */
+.info-group {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #333;
+}
+
+.info-group h3 {
+    color: #FFD700; /* Yellow subheading */
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.info-group p, .info-group ul {
+    color: #E5E5E5;
+    margin: 0;
+    padding: 0;
+}
+
+.styled-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.styled-list li {
+    margin-bottom: 5px;
+}
+
+.neon-link {
+    font-weight: 600;
+}
+
+.link-icon {
+    margin-right: 5px;
+}
+
+/* --- MESSAGE BOX (Replaces alert()) --- */
+.message-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #E5E5E5;
+    text-align: center;
+    border: 1px solid #FFD700;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #39FF14;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #FFD700;
+}
+</style>
 </head>
 <body>
 
@@ -47,6 +292,7 @@
 
                 <button type="submit">Submit Inquiry</button>
             </form>
+            <!-- Feedback box to show success/error messages -->
             <div id="contactOutput" class="message-box hidden"></div>
         </div>
 
@@ -60,8 +306,7 @@
             </div>
 
             <div class="info-group">
-                <h3>LinkedIn (Corrected Link)</h3>
-                <!-- The fixed, working link -->
+                <h3>LinkedIn</h3>
                 <p>
                     <a href="https://www.linkedin.com/in/usaidhussain-usaid-h-509b81283" target="_blank" class="neon-link">
                         <span class="link-icon">🔗</span> View My Professional Profile
@@ -92,6 +337,47 @@
 <p>© 2025 Usaid Hussain | UsaidHussainDigital.com</p>
 </footer>
 
-<script src="java.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('contactForm');
+        const outputBox = document.getElementById('contactOutput');
+        const recipientEmail = "usaid.hussain.dev@example.com"; 
+
+        // Function to display messages in the custom box
+        function showMessage(message, type) {
+            outputBox.textContent = message;
+            outputBox.classList.remove('hidden');
+            outputBox.style.backgroundColor = type === 'success' ? '#1E3A1E' : '#450A0A'; // Dark green/red
+            outputBox.style.borderColor = type === 'success' ? '#39FF14' : '#FFD700'; // Neon green/yellow border
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Gather form data
+            const name = document.getElementById('cname').value;
+            const email = document.getElementById('cemail').value;
+            const subject = document.getElementById('csubject').value;
+            const message = document.getElementById('cmessage').value;
+
+            // Construct email body
+            const emailBody = `Sender Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
+            
+            // Construct mailto link
+            const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${emailBody}`;
+
+            // Provide immediate feedback to the user
+            showMessage("Generating email draft...", 'success');
+
+            // Timeout to simulate processing and then open the mail client
+            setTimeout(() => {
+                window.location.href = mailtoLink;
+                // Optional: Show a message that the email client is opening
+                showMessage("Your inquiry has been drafted! Please send it via your email client.", 'success');
+                form.reset();
+            }, 500); // Small delay for user feedback
+        });
+    });
+</script>
 </body>
 </html>
