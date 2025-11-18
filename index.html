@@ -4,7 +4,173 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Usaid Hussain | Home</title>
-<link rel="stylesheet" href="styles.css">
+<!-- Embedded CSS for a single, self-contained file -->
+<style>
+/**
+ * Stylesheet: Enhanced, Vibrant, and Clean Layout
+ * Palette: Charcoal (#141414), Bright Yellow (#FFD700), Neon Green (#39FF14)
+ */
+
+/* --- GLOBAL STYLES & FONT --- */
+body {
+    /* Set a smooth background color and font */
+    background-color: #141414; /* Deep Charcoal Background */
+    color: #FFD700; /* Bright Gold/Yellow for main text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex; /* Enable flex container for centering the content */
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: #39FF14; /* Neon Green links */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #FFD700; /* Yellow hover effect */
+}
+
+/* Headings use the Neon Green accent color */
+h1, h2, h3 {
+    color: #39FF14; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- TOP AND BOTTOM BANNERS (New) --- */
+.site-header, .site-footer {
+    background-color: #000000; /* Pure Black Banner */
+    color: #FFD700;
+    padding: 15px 20px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    z-index: 10;
+}
+
+/* --- NAVIGATION --- */
+.site-header {
+    border-bottom: 3px solid #39FF14; /* Green underline */
+}
+
+.main-nav ul, nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center navigation links */
+}
+
+.main-nav ul li, nav ul li {
+    margin: 0 15px;
+}
+
+/* --- MAIN CONTENT WRAPPER (Centered) --- */
+.content-wrapper {
+    /* This wrapper is now the flex-grow element */
+    flex-grow: 1; 
+    max-width: 1000px; 
+    margin: 0 auto; /* Center the entire main content block */
+    padding: 20px;
+    width: 100%; /* Ensure it fills the allowed width */
+    box-sizing: border-box;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    position: relative;
+    height: 300px;
+    background: url('https://placehold.co/1200x300/1e293b/FFFFFF?text=Digital+Transformation+Hub') no-repeat center center/cover;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.8);
+}
+
+.hero-content p {
+    color: #FFD700;
+    font-size: 1.2em;
+}
+
+/* --- SUMMARY SECTION --- */
+.portfolio-section {
+    background-color: #1a1a1a; /* Dark card background */
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.summary-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .summary-content-grid {
+        grid-template-columns: 300px 1fr; /* Image on the left, text on the right */
+    }
+}
+
+.summary-img {
+    width: 100%; /* Make image responsive */
+    max-width: 300px; /* Limit max size */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 3px solid #FFD700; /* Yellow border */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.summary-text p {
+    margin-bottom: 15px;
+    color: #E5E5E5;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #39FF14;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #FFD700;
+}
+</style>
 </head>
 
 <body>
@@ -24,11 +190,11 @@
 <main class="content-wrapper">
 
     <section class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>Welcome to Usaid Hussain's Portfolio</h1>
-            <p>Restaurant-Focused Web Developer | Digital Problem Solver</p>
-        </div>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to Usaid Hussain's Portfolio</h1>
+            <p>Restaurant-Focused Web Developer | Digital Problem Solver</p>
+        </div>
     </section>
 
     <section class="summary portfolio-section">
@@ -36,21 +202,24 @@
         
         <div class="summary-content-grid"> 
             
-            <img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?q=80&w=1200" 
-             alt="Technical workspace"
-             class="summary-img"
-             width="300"> <div class="summary-text">
+            <img src="https://placehold.co/300x400/1e293b/FFFFFF?text=Professional+Headshot" 
+              alt="Professional Headshot"
+              class="summary-img"
+              width="300"
+              onerror="this.onerror=null; this.src='https://placehold.co/300x400/1e293b/FFFFFF?text=Professional+Headshot';"
+            > 
+            
+            <div class="summary-text">
                 <p>
-                I am **Usaid Hussain**,a results-driven Junior Web Developer with a unique focus on elevating the digital presence and operational efficiency of restaurant businesses. Leveraging a robust foundation in HTML5, CSS3, and modern JavaScript, I specialize in building fast, mobile-first web platforms that directly address real-world business challenges, such as streamlining manual booking and improving customer communication.
-
-            My practical experience includes hands-on development for restaurants and a strategic mindset honed by my recent Microsoft Office Specialist certifications and advanced training in Excel data analysis (including PivotTables and data visualization). This blend of technical coding skills and business process proficiency allows me to deliver not just visually appealing websites, but tangible digital solutions that drive engagement and growth.
-
-My career objective is to partner with forward-thinking food-service brands, applying technology and creative problem-solving to successfully navigate the digital landscape.
+                I am **Usaid Hussain**, a results-driven Junior Web Developer with a unique focus on elevating the digital presence and operational efficiency of restaurant businesses. Leveraging a robust foundation in HTML5, CSS3, and modern JavaScript, I specialize in building fast, mobile-first web platforms that directly address real-world business challenges, such as streamlining manual booking and improving customer communication.
                 </p>
 
                 <p>
-                My long-term career goal is to support global food-service brands in their digital transformation,
-                leveraging creativity and technology to solve real business challenges.
+                My practical experience includes hands-on development for restaurants and a strategic mindset honed by my recent Microsoft Office Specialist certifications and advanced training in Excel data analysis (including PivotTables and data visualization). This blend of technical coding skills and business process proficiency allows me to deliver not just visually appealing websites, but tangible digital solutions that drive engagement and growth.
+                </p>
+                
+                <p>
+                My career objective is to partner with forward-thinking food-service brands, applying technology and creative problem-solving to successfully navigate the digital landscape.
                 </p>
             </div>
         </div>
