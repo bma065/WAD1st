@@ -7,8 +7,9 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-<nav>
+
+<header class="site-header">
+<nav class="main-nav">
 <ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="contact.html">Contact</a></li>
@@ -19,18 +20,78 @@
 </nav>
 </header>
 
+<main class="content-wrapper">
 
-<section>
-<h2>Contact Information</h2>
-<p>Email: <a href="mailto:uhussain2006@gmail.com">uhussain2006@gmail.com</a></p>
-<p>LinkedIn: <a <p>LinkedIn: <a href="https://www.linkedin.com/in/usaidhussain-usaid-h-509b81283" target="_blank">View My LinkedIn Profile</a></p>
-<p>Instagram: <a href="https://instagram.com/usaid.codes" target="_blank">instagram.com/usaid.codes</a></p>
-<p>GitHub: <a href="https://github.com/usaidhussain" target="_blank">github.com/usaidhussain</a></p>
-</section>
+    <section class="skills-page-title scroll-animate">
+        <h1>Let's Connect</h1>
+        <p>I'm available for new web development projects, particularly those focused on the restaurant sector.</p>
+    </section>
 
+    <div class="contact-grid">
+        
+        <!-- Contact Form Card -->
+        <div class="contact-form-card skill-card scroll-animate">
+            <h2 class="card-heading">Send Me a Message</h2>
+            <form id="contactForm" class="contact-form">
+                <label for="cname">Your Name:</label>
+                <input type="text" id="cname" required>
 
-<footer>
-<p>© 2025 Usaid Hussain</p>
+                <label for="cemail">Your Email:</label>
+                <input type="email" id="cemail" required>
+                
+                <label for="csubject">Subject:</label>
+                <input type="text" id="csubject" required>
+
+                <label for="cmessage">Message:</label>
+                <textarea id="cmessage" rows="5" required></textarea>
+
+                <button type="submit">Submit Inquiry</button>
+            </form>
+            <div id="contactOutput" class="message-box hidden"></div>
+        </div>
+
+        <!-- Details Card -->
+        <div class="contact-details-card skill-card scroll-animate">
+            <h2 class="card-heading">My Digital Presence</h2>
+            
+            <div class="info-group">
+                <h3>Email</h3>
+                <p><a href="mailto:usaid.hussain.dev@example.com" class="neon-link">usaid.hussain.dev@example.com</a></p>
+            </div>
+
+            <div class="info-group">
+                <h3>LinkedIn (Corrected Link)</h3>
+                <!-- The fixed, working link -->
+                <p>
+                    <a href="https://www.linkedin.com/in/usaidhussain-usaid-h-509b81283" target="_blank" class="neon-link">
+                        <span class="link-icon">🔗</span> View My Professional Profile
+                    </a>
+                </p>
+            </div>
+            
+            <div class="info-group">
+                <h3>Location</h3>
+                <p>London, United Kingdom</p>
+            </div>
+
+            <div class="info-group">
+                <h3>Other Links</h3>
+                <ul class="styled-list">
+                    <li><a href="https://github.com/usaidhussain" target="_blank">GitHub Profile</a></li>
+                    <li><a href="https://twitter.com/usaidhussain" target="_blank">Twitter/X Feed</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<footer class="site-footer">
+<p>© 2025 Usaid Hussain | UsaidHussainDigital.com</p>
 </footer>
+
+<script src="java.js"></script>
 </body>
 </html>
