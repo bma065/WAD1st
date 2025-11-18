@@ -1,205 +1,22 @@
 /**
- * Global Stylesheet for Usaid Hussain's Portfolio
- * Theme: Vibrant Black, Yellow, and Orangered Accent (#FF4500)
- */
-
-/* --- GLOBAL STYLES --- */
-
-/* Black background and yellow text for the entire page body */
-body {
-    background-color: black;
-    color: yellow;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
-/* Yellow color for all links */
-a {
-    color: yellow;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: #FF4500; /* Vibrant accent color on hover */
-}
-
-/* Headers using the vibrant accent color */
-h1, h2, h3 {
-    color: #FF4500; /* Orangered accent color for pop */
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-top: 0; /* Clean card styling */
-}
-
-/* --- LAYOUT WRAPPER --- */
-.content-wrapper {
-    max-width: 1200px; /* Constrain content width */
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* --- HEADER / NAVIGATION --- */
-.site-header {
-    background-color: #111; /* Dark grey header for slight depth */
-    padding: 15px 40px;
-    border-bottom: 2px solid #FF4500;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center; /* Center navigation links */
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-/* --- PAGE TITLE SECTION --- */
-.page-title-section {
-    text-align: center;
-    padding: 50px 20px;
-    margin-bottom: 40px;
-    background: #0a0a0a; /* Subtle difference from body background */
-    border-bottom: 1px solid #222;
-}
-
-.page-title-section h1 {
-    font-size: 3em;
-}
-
-.page-title-section p {
-    color: #ffd700; /* Goldish yellow for contrast text */
-    font-size: 1.2em;
-}
-
-/* --- SKILL GRID LAYOUT (The main neatness change) --- */
-.skill-grid {
-    display: grid;
-    /* Three columns of equal size by default */
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 30px; /* Space between cards */
-    margin-top: 20px;
-}
-
-/* --- SKILL CARD STYLING (Vibrancy) --- */
-.skill-card {
-    background-color: #181818; /* Darker card background */
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid #333;
-    /* Subtle yellow shadow for vibrancy */
-    box-shadow: 0 4px 15px rgba(255, 255, 0, 0.15); 
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px); /* Lift card on hover */
-    box-shadow: 0 8px 25px rgba(255, 255, 0, 0.3);
-}
-
-.card-icon {
-    border-radius: 50%; /* Make the small pictures circular */
-    margin-bottom: 20px;
-    border: 3px solid yellow;
-}
-
-/* Lists inside cards */
-.skill-card ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
-}
-
-.skill-card ul li {
-    margin-bottom: 10px;
-    padding-left: 15px;
-    position: relative;
-    color: white; /* Use white text for list items for better readability */
-}
-
-/* Custom list marker (yellow checkmark or bullet) */
-.skill-card ul li::before {
-    content: '▶'; 
-    color: yellow;
-    position: absolute;
-    left: 0;
-    font-size: 0.8em;
-    top: 3px;
-}
-
-/* --- TABLE STYLING --- */
-.skill-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    text-align: left;
-}
-
-.skill-table th, .skill-table td {
-    padding: 10px;
-    border-bottom: 1px solid #333;
-}
-
-.skill-table th {
-    background-color: #2a2a2a; /* Header background */
-    color: #FF4500; /* Accent color for table headers */
-    font-weight: bold;
-}
-
-.skill-table tr:last-child td {
-    border-bottom: none;
-}
-
-.skill-table tbody tr:hover {
-    background-color: #222;
-}
-
-/* --- FOOTER --- */
-.site-footer {
-    background-color: #111;
-    text-align: center;
-    padding: 15px;
-    margin-top: 50px;
-    border-top: 2px solid #FF4500;
-}
-
-.site-footer p {
-    margin: 0;
-    font-size: 0.9em;
-    color: yellow;
-}
-
-/* --- RESPONSIVENESS (Neat on Mobile) --- */
-@media (max-width: 900px) {
-    .skill-grid {
-        /* Switch to 2 columns on tablets */
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
-
-@media (max-width: 600px) {
-    .skill-grid {
-        /* Switch to a single column on mobile */
-        grid-template-columns: 1fr; 
-    }
-    .skill-card {
-        padding: 20px;
-    }
-    .page-title-section h1 {
-        font-size: 2em;
-    }
-}
-/**
  * Stylesheet: Enhanced, Vibrant, and Clean Layout
  * Palette: Charcoal (#141414), Bright Yellow (#FFD700), Neon Green (#39FF14)
  */
+
+/* --- KEYFRAME ANIMATIONS --- */
+
+/* Animation for the star list markers */
+@keyframes star-pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* Animation for skill bar loading */
+@keyframes skill-load {
+    from { width: 0%; }
+    to { width: var(--skill-width); } /* This placeholder will be overridden by the inline style */
+}
 
 /* --- GLOBAL STYLES & FONT --- */
 body {
@@ -265,6 +82,8 @@ h1, h2, h3 {
 .skills-page-title h1 {
     font-size: 3.5em;
     margin-bottom: 5px;
+    /* Add a subtle text shadow for neon effect */
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.5), 0 0 10px rgba(57, 255, 20, 0.3);
 }
 
 .skills-page-title p {
@@ -285,20 +104,21 @@ h1, h2, h3 {
     grid-column: 1 / -1; /* Makes the Technical Skills card span both columns */
 }
 
-/* --- SKILL CARD STYLING --- */
+/* --- SKILL CARD STYLING (The Boxes) --- */
 .skill-card {
     background-color: #1a1a1a; /* Card Background */
     padding: 35px; /* Increased padding inside the box */
     border-radius: 15px; /* More rounded corners */
     border-left: 6px solid #FFD700; /* Thicker yellow accent border */
-    /* ENHANCED BOX SHADOW for a more pronounced 3D effect */
+    /* Enhanced Box Shadow for a more pronounced 3D effect */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(57, 255, 20, 0.1); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card:hover {
     transform: translateY(-8px); /* Subtle lift */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(57, 255, 20, 0.4); /* Stronger Neon Green glow */
+    /* Stronger, more focused Neon Green glow on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8), 0 0 35px rgba(57, 255, 20, 0.6); 
 }
 
 .card-heading {
@@ -318,6 +138,7 @@ h1, h2, h3 {
     margin-bottom: 15px;
     padding-left: 25px;
     position: relative;
+    color: white; /* Contrast enhancement: Pure white list items */
 }
 
 /* Custom list marker using Neon Green */
@@ -328,6 +149,8 @@ h1, h2, h3 {
     left: 0;
     font-size: 1.1em;
     top: 0;
+    /* Animation: Subtle, continuous pulse */
+    animation: star-pulse 2s infinite alternate; 
 }
 
 /* --- TECHNICAL SKILLS / SKILL BARS --- */
@@ -354,18 +177,29 @@ h1, h2, h3 {
     position: relative;
 }
 
+/* SKILL BAR ANIMATION */
 .bar-inner {
     height: 100%;
-    background: linear-gradient(90deg, #FFD700, #39FF14); /* Gradient bar for vibrancy */
+    /* Gradient for vibrancy */
+    background: linear-gradient(90deg, #FFD700, #39FF14); 
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: 10px;
-    color: #141414; /* Dark text over the bright bar */
+    color: #141414; 
     font-weight: 600;
-    /* Note: The 'width' is set inline in the HTML to show the level */
+
+    /* Initial state set to 0 and transition applied for smooth loading */
+    width: 0 !important; /* Temporarily reset inline width for animation */
+    transition: width 1.5s ease-out; /* Smooth transition/animation */
+    /* The inline style in HTML will automatically override the width: 0 and trigger the transition! */
 }
+
+/* To ensure the animation runs on page load, we use a small trick:
+   We can't add this class to skills.html, so we rely on the transition property above,
+   which executes when the browser reads the inline style (e.g., width: 95%).
+*/
 
 /* --- FOOTER --- */
 .site-footer {
