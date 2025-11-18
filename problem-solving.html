@@ -4,12 +4,210 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Problem Solving | Usaid Hussain</title>
-<link rel="stylesheet" href="styles.css">
-<script defer src="script.js"></script>
+<!-- Embedded CSS for a single, self-contained file -->
+<style>
+/**
+ * Stylesheet: Problem Solving Case Study Page
+ * Palette: Charcoal (#141414), Bright Yellow (#FFD700), Neon Green (#39FF14), Pure Black (#000000)
+ */
+
+/* --- GLOBAL STYLES & FONT --- */
+body {
+    background-color: #141414; /* Deep Charcoal Background */
+    color: #E5E5E5; /* Light Grey for main content text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: #39FF14; /* Neon Green links */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #FFD700; /* Yellow hover effect */
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    color: #39FF14; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- TOP AND BOTTOM BANNERS --- */
+.site-header, .site-footer {
+    background-color: #000000; /* Pure Black Banner */
+    color: #FFD700;
+    padding: 15px 20px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+/* --- NAVIGATION --- */
+.site-header {
+    border-bottom: 3px solid #39FF14;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center navigation links */
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: #FFD700; /* Navigation links are yellow */
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    color: #39FF14; /* Hover turns them green */
+}
+
+/* --- MAIN CONTENT WRAPPER (Centered) --- */
+.content-wrapper {
+    flex-grow: 1; 
+    max-width: 800px; /* Slightly narrower content for focus */
+    margin: 0 auto; /* Center the entire main content block */
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- CASE STUDY SECTION --- */
+.case-study {
+    background-color: #1a1a1a; /* Dark card background */
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #FFD700; /* Yellow accent stripe */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.case-study h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.8);
+}
+
+.case-study h3 {
+    margin-top: 25px;
+    color: #FFD700; /* Yellow for subheadings */
+    font-size: 1.4em;
+}
+
+.case-study ul {
+    list-style: none;
+    padding: 0;
+}
+
+.case-study ul li a {
+    display: inline-block;
+    padding: 5px 0;
+}
+
+/* --- FORM STYLING --- */
+#bookingForm {
+    background-color: #0d0d0d;
+    padding: 20px;
+    border: 1px solid #39FF14; /* Neon green border */
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#bookingForm label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #39FF14;
+}
+
+#bookingForm input[type="text"],
+#bookingForm textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #222;
+    border: 1px solid #555;
+    color: #E5E5E5;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#bookingForm textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#bookingForm button {
+    background-color: #FFD700; /* Yellow button */
+    color: #000;
+    border: none;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#bookingForm button:hover {
+    background-color: #39FF14; /* Green hover */
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(57, 255, 20, 0.5);
+}
+
+/* --- OUTPUT AREA --- */
+#emailOutput {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #1a1a1a;
+    border: 1px dashed #FFD700;
+    border-radius: 5px;
+}
+
+.email-link {
+    color: #FFD700;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #39FF14;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #FFD700;
+}
+</style>
 </head>
 <body>
-<header>
-<nav>
+
+<header class="site-header">
+<nav class="main-nav">
 <ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="contact.html">Contact</a></li>
@@ -20,46 +218,78 @@
 </nav>
 </header>
 
+<main class="content-wrapper">
 
-<section>
-<h2>Restaurant Digital Transformation Case Study</h2>
-<p>The goal of this digital transformation project is to help a restaurant improve customer engagement,
-modernize communication, and streamline booking requests through a simple, effective online tool.</p>
+    <section class="case-study">
+        <h2>Restaurant Digital Transformation Case Study</h2>
+        <p>The goal of this digital transformation project is to help a restaurant improve customer engagement,
+        modernize communication, and streamline booking requests through a simple, effective online tool. This demonstration
+        shows the core structure designed to integrate contact, social presence, and interactive forms for a seamless customer experience.</p>
 
+        <h3>Restaurant Contact Details (Simulated)</h3>
+        <p><strong>Email:</strong> contact@tastytable.com</p>
+        <p><strong>Phone:</strong> 01234 567890</p>
 
-<h3>Restaurant Contact Details</h3>
-<p>Email: contact@tastytable.com</p>
-<p>Phone: 01234 567890</p>
+        <h3>Social Media Integration</h3>
+        <ul>
+            <li><a href="https://facebook.com/tastytable" target="_blank">Facebook (tastytable)</a></li>
+            <li><a href="https://instagram.com/tastytable" target="_blank">Instagram (tastytable)</a></li>
+            <li><a href="https://twitter.com/tastytable" target="_blank">Twitter/X (tastytable)</a></li>
+        </ul>
 
+        <h3>Booking & Feedback Form (Live Demo)</h3>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
 
-<h3>Social Media</h3>
-<ul>
-<li><a href="https://facebook.com/tastytable" target="_blank">Facebook</a></li>
-<li><a href="https://instagram.com/tastytable" target="_blank">Instagram</a></li>
-<li><a href="https://twitter.com/tastytable" target="_blank">Twitter/X</a></li>
-</ul>
+            <label for="message">Booking Request / Feedback:</label>
+            <textarea id="message" required></textarea>
 
+            <button type="submit">Generate Email</button>
+        </form>
 
-<h3>Booking & Feedback Form</h3>
-<form id="bookingForm">
-<label>Name:</label>
-<input type="text" id="name" required>
+        <!-- Output area for the generated email link -->
+        <p id="emailOutput">Submit the form above to generate a simulated mailto link for review.</p>
+    </section>
 
+</main>
 
-<label>Booking Request / Feedback:</label>
-<textarea id="message" required></textarea>
-
-
-<button type="submit">Generate Email</button>
-</form>
-
-
-<p id="emailOutput"></p>
-</section>
-
-
-<footer>
-<p>© 2025 Usaid Hussain</p>
+<footer class="site-footer">
+<p>© 2025 Usaid Hussain | UsaidHussainDigital.com</p>
 </footer>
+
+<!-- Embedded JavaScript for form functionality -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('bookingForm');
+        const emailOutput = document.getElementById('emailOutput');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Get values from the form inputs
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+
+            // Construct the email body and subject
+            const emailBody = `Name: ${name}\n\nMessage/Request:\n${message}\n\n--- End of Form Submission ---`;
+            const encodedBody = encodeURIComponent(emailBody);
+            const subject = encodeURIComponent('New Booking Request or Feedback from Website');
+
+            // Create the mailto link
+            const mailtoLink = `mailto:contact@tastytable.com?subject=${subject}&body=${encodedBody}`;
+
+            // Update the output area with the results
+            emailOutput.innerHTML = `
+                <p style="color: #39FF14; font-weight: bold;">✅ Email Data Captured!</p>
+                <p>The system has successfully compiled the data for the restaurant. In a live environment, this would be sent directly.</p>
+                <a href="${mailtoLink}" class="email-link" target="_blank" style="color: #FFD700;">Click here to open a draft email (simulated link)</a>
+            `;
+
+            // Optional: Clear form after submission for a clean look
+            form.reset();
+        });
+    });
+</script>
 </body>
 </html>
