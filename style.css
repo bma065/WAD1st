@@ -10,6 +10,34 @@ body {
     color: #FFD700;
     font-family: Arial, sans-serif;
     line-height: 1.7;
+    /* Black background and yellow text for the entire page body */
+body {
+    background-color: black; /* Sets the background to black */
+    color: yellow;          /* Sets the default text color to yellow */
+    font-family: Arial, sans-serif; /* Example font */
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure navigation links and other links are also yellow */
+a {
+    color: yellow;
+    /* Other link styles like text-decoration: none; */
+}
+
+/* Optional: Make sure headings are yellow (if the 'color: yellow' on body doesn't override previous styles) */
+h1, h2, h3, h4, h5, h6 {
+    color: yellow;
+}
+
+/* Optional: Center the image if you like its new smaller size */
+.summary-img {
+    display: block;
+    margin: 20px auto;
+    /* You may also want to ensure it doesn't exceed 100% of the parent width */
+    max-width: 100%;
+    height: auto;
+}
 }
 
 /* NAVIGATION BAR */
