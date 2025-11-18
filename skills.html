@@ -7,8 +7,9 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-<nav>
+
+<header class="site-header">
+<nav class="main-nav">
 <ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="contact.html">Contact</a></li>
@@ -19,39 +20,102 @@
 </nav>
 </header>
 
+<main class="content-wrapper">
 
-<section>
-<h2>Skills & Qualifications</h2>
+    <!-- Page Title Section using established class -->
+    <section class="skills-page-title scroll-animate">
+        <h1>Skills & Qualifications</h1>
+        <p>A comprehensive overview of my technical abilities and professional credentials.</p>
+    </section>
 
+    <!-- Skills Grid Layout -->
+    <div class="skills-grid">
 
-<h3>Certificates & Diplomas</h3>
-<ul>
-<li>Diploma in Web Development – Digital Skills Academy</li>
-<li>JavaScript Foundations Certificate – CodeCamp</li>
-<li>Responsive Web Design Certificate – FreeCodeCamp</li>
-</ul>
+        <!-- Certificates & Diplomas Card -->
+        <div class="skill-card scroll-animate">
+            <h2 class="card-heading">Certificates & Diplomas</h2>
+            <ul class="styled-list">
+                <!-- Existing Diplomas -->
+                <li>Diploma in Web Development – Digital Skills Academy</li>
+                <li>JavaScript Foundations Certificate – CodeCamp</li>
+                <li>Responsive Web Design Certificate – FreeCodeCamp</li>
+                
+                <!-- NEW Microsoft Office Certifications -->
+                <li>Cert Prep: **PowerPoint Associate** (Microsoft 365 Apps) - *LinkedIn Learning*</li>
+                <li>Cert Prep: **Outlook Associate** (Microsoft Office 2019/365) - *LinkedIn Learning*</li>
+                
+                <!-- NEW Excel Specializations -->
+                <li>Excel: **Introduction to Formulas and Functions** (2023) - *LinkedIn Learning*</li>
+                <li>Excel: **PivotTables for Beginners** - *LinkedIn Learning*</li>
+                <li>Excel: **Introduction to Charts and Graphs** - *LinkedIn Learning*</li>
+                <li>Excel: **Introduction to Formatting** - *LinkedIn Learning*</li>
+            </ul>
+        </div>
 
+        <!-- Work Experience Card -->
+        <div class="skill-card scroll-animate">
+            <h2 class="card-heading">Work Experience</h2>
+            <ul class="styled-list">
+                <li>Junior Web Developer – TastyBites Restaurant (2023–2024)</li>
+                <li>Freelance Front-End Designer – Multiple Small Restaurants</li>
+            </ul>
+        </div>
 
-<h3>Work Experience</h3>
-<ul>
-<li>Junior Web Developer – TastyBites Restaurant (2023–2024)</li>
-<li>Freelance Front-End Designer – Multiple Small Restaurants</li>
-</ul>
+        <!-- Technical Skills Card (Full Width) -->
+        <div class="skill-card full-width scroll-animate">
+            <h2 class="card-heading">Technical Skills</h2>
+            <div class="skill-bar-container">
+                <!-- HTML Skill Bar -->
+                <div class="skill-item">
+                    <span class="skill-name">HTML5 / Semantic Markup</span>
+                    <div class="bar-outer">
+                        <div class="bar-inner" style="width: 95%;">Advanced (95%)</div>
+                    </div>
+                </div>
 
+                <!-- CSS Skill Bar -->
+                <div class="skill-item">
+                    <span class="skill-name">CSS3 / Responsive Design</span>
+                    <div class="bar-outer">
+                        <div class="bar-inner" style="width: 90%;">Advanced (90%)</div>
+                    </div>
+                </div>
 
-<h3>Technical Skills</h3>
-<table>
-<tr><th>Skill</th><th>Level</th></tr>
-<tr><td>HTML</td><td>Advanced</td></tr>
-<tr><td>CSS</td><td>Advanced</td></tr>
-<tr><td>JavaScript</td><td>Intermediate</td></tr>
-<tr><td>UI/UX Design</td><td>Intermediate</td></tr>
-</table>
-</section>
+                <!-- JavaScript Skill Bar -->
+                <div class="skill-item">
+                    <span class="skill-name">JavaScript (ES6+)</span>
+                    <div class="bar-outer">
+                        <div class="bar-inner" style="width: 75%;">Intermediate (75%)</div>
+                    </div>
+                </div>
 
+                <!-- UI/UX Design Skill Bar -->
+                <div class="skill-item">
+                    <span class="skill-name">UI/UX Design Principles</span>
+                    <div class="bar-outer">
+                        <div class="bar-inner" style="width: 65%;">Intermediate (65%)</div>
+                    </div>
+                </div>
+                
+                <!-- New Excel Skill Bar based on certificates -->
+                <div class="skill-item">
+                    <span class="skill-name">Microsoft Excel & Data Analysis</span>
+                    <div class="bar-outer">
+                        <div class="bar-inner" style="width: 80%;">Strong (80%)</div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
 
-<footer>
-<p>© 2025 Usaid Hussain</p>
+</main>
+
+<footer class="site-footer">
+<p>© 2025 Usaid Hussain | UsaidHussainDigital.com</p>
 </footer>
+
+<script src="java.js"></script>
 </body>
 </html>
