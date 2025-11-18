@@ -138,3 +138,133 @@ footer {
     margin-top: 40px;
     box-shadow: 0 -3px 15px #FFD700;
 }
+
+/* --- GLOBAL STYLES --- */
+
+/* Black background and yellow text for the entire page body */
+body {
+    background-color: black;
+    color: yellow;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Yellow color for all links */
+a {
+    color: yellow;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #FF4500; /* Vibrant accent color on hover */
+}
+
+/* Headers using the vibrant accent color */
+h1, h2 {
+    color: #FF4500; /* Orangered accent color for pop */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- HEADER / NAVIGATION --- */
+.site-header {
+    background-color: #111; /* Dark grey header for slight depth */
+    padding: 15px 40px;
+    border-bottom: 2px solid #FF4500;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center navigation links */
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+/* --- MAIN CONTENT LAYOUT --- */
+.content-wrapper {
+    max-width: 1200px; /* Constrain content width */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+    background: #222; /* Slightly lighter background for the hero banner */
+    border-radius: 8px; /* Rounded corners for sectioning */
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    color: white; /* Use white for better contrast here */
+    font-size: 1.2em;
+}
+
+/* --- SECTIONED CONTENT --- */
+.portfolio-section {
+    padding: 40px;
+    margin-bottom: 30px;
+    border: 1px solid #333; /* Light border to section off areas */
+    border-radius: 8px;
+    background-color: #0d0d0d; /* Slightly different background for the section */
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.1); /* Subtle yellow shadow */
+}
+
+/* CSS Grid for the Summary Section */
+.summary-content-grid {
+    display: grid;
+    /* Two columns: one auto for the image, one for the text */
+    grid-template-columns: auto 1fr; 
+    gap: 40px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.summary-img {
+    width: 300px; /* HTML attribute preserved, CSS ensures smooth rendering */
+    height: auto;
+    border: 3px solid yellow; /* Frame the picture */
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+}
+
+/* Responsive adjustment for small screens (image stacks on top of text) */
+@media (max-width: 768px) {
+    .summary-content-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+    
+    .summary-img {
+        margin: 0 auto 20px auto; /* Center image when stacked */
+    }
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    background-color: #111;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+    border-top: 2px solid #FF4500;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: yellow;
+}
