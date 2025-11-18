@@ -1,3 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Usaid Hussain</title>
+<!-- Tailwind is not used here, using custom CSS for the portfolio aesthetic -->
+<style>
+/**
+ * Stylesheet: Enhanced, Vibrant, and Clean Layout (Contact Page Focus)
+ * Palette: Charcoal (#141414), Bright Yellow (#FFD700), Neon Green (#39FF14)
+ */
+
+/* --- KEYFRAME ANIMATIONS --- */
+@keyframes star-pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+@keyframes neon-glow {
+    0% { box-shadow: 0 0 10px rgba(57, 255, 20, 0.4), 0 0 20px rgba(57, 255, 20, 0.2); }
+    50% { box-shadow: 0 0 15px rgba(57, 255, 20, 0.7), 0 0 30px rgba(57, 255, 20, 0.5); }
+    100% { box-shadow: 0 0 10px rgba(57, 255, 20, 0.4), 0 0 20px rgba(57, 255, 20, 0.2); }
+}
+
+/* --- GLOBAL STYLES & FONT --- */
+body {
+    background-color: #141414; /* Deep Charcoal Background */
+    color: #FFD700; /* Bright Gold/Yellow for main text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+a {
+    color: #39FF14; /* Neon Green links */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #FFD700; /* Yellow hover effect */
+}
+
+/* Headings use the Neon Green accent color */
+h1, h2, h3 {
+    color: #39FF14; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- LAYOUT WRAPPER --- */
+.content-wrapper {
+    max-width: 1000px; 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- HEADER / NAVIGATION --- */
+.site-header {
+    background-color: #1a1a1a; 
+    padding: 15px 20px;
+    border-bottom: 3px solid #39FF14; /* Green underline */
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+/* --- PAGE TITLE SECTION --- */
+.skills-page-title {
+    text-align: center;
+    padding: 50px 20px 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #333;
+}
+
+.skills-page-title h1 {
+    font-size: 3.5em;
+    margin-bottom: 5px;
+    /* Add a subtle text shadow for neon effect */
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.5), 0 0 10px rgba(57, 255, 20, 0.3);
+}
+
+.skills-page-title p {
+    color: #FFD700;
+    font-size: 1.1em;
+}
+
+/* --- SCROLL REVEAL STYLES --- */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- SKILL CARD STYLING (The Boxes) --- */
+.skill-card {
+    background-color: #1a1a1a; /* Card Background */
+    padding: 35px; /* Increased padding inside the box */
+    border-radius: 15px; /* More rounded corners */
+    border-left: 6px solid #FFD700; /* Thicker yellow accent border */
+    /* Enhanced Box Shadow for a more pronounced 3D effect */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(57, 255, 20, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px); /* Subtle lift */
+    /* Stronger, more focused Neon Green glow on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8), 0 0 35px rgba(57, 255, 20, 0.6); 
+}
+
+.card-heading {
+    border-bottom: 2px dashed #333;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* --- CONTACT PAGE STYLES --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Form takes 2/3, details take 1/3 */
+    gap: 30px;
+    padding-bottom: 50px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #39FF14; /* Neon green border */
+    background-color: #0d0d0d;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #FFD700; /* Yellow focus border */
+    outline: none;
+    box-shadow: 0 0 8px rgba(57, 255, 20, 0.5);
+}
+
+.contact-form button {
+    background: linear-gradient(90deg, #39FF14, #FFD700);
+    color: #141414;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.2s;
+    margin-top: 20px;
+}
+
+.contact-form button:hover {
+    transform: scale(1.02);
+}
+
+/* Contact Details Card Specifics */
+.info-group {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #222;
+}
+.info-group h3 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #FFD700;
+}
+.neon-link {
+    color: #39FF14;
+    text-decoration: underline;
+}
+.link-icon {
+    margin-right: 5px;
+}
+.styled-list {
+    list-style: none;
+    padding: 0;
+}
+.styled-list li {
+    margin-bottom: 5px;
+    padding-left: 0;
+}
+.styled-list li a:hover {
+    text-decoration: underline;
+}
+
+/* Form Message Box (Replaces alerts) */
+.message-box {
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.message-box.hidden {
+    display: none;
+}
+.message-box.success {
+    background-color: rgba(57, 255, 20, 0.2); /* Neon Green background */
+    color: #39FF14;
+    border: 1px solid #39FF14;
+}
+.message-box.error {
+    background-color: rgba(255, 69, 0, 0.2); /* Orangered background */
+    color: #FF4500;
+    border: 1px solid #FF4500;
+}
+.message-box.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.message-box a.mail-link {
+    color: #FFD700;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.message-box a.mail-link:hover {
+    background-color: #3a3a3a;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 3px solid #39FF14;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #FFD700;
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack contact form and details vertically */
+    }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+<nav class="main-nav">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="skills.html">Skills</a></li>
+<li><a href="showcase.html">Business Showcase</a></li>
+<li><a href="problem-solving.html">Problem Solving</a></li>
+</ul>
+</nav>
+</header>
+
+<main class="content-wrapper">
+
+    <section class="skills-page-title scroll-animate">
+        <h1>Let's Connect</h1>
+        <p>I'm available for new web development projects, particularly those focused on the restaurant sector.</p>
+    </section>
+
+    <div class="contact-grid">
+        
+        <!-- Contact Form Card -->
+        <div class="contact-form-card skill-card scroll-animate">
+            <h2 class="card-heading">Send Me a Message</h2>
+            <form id="contactForm" class="contact-form">
+                <label for="cname">Your Name:</label>
+                <input type="text" id="cname" required>
+
+                <label for="cemail">Your Email:</label>
+                <input type="email" id="cemail" required>
+                
+                <label for="csubject">Subject:</label>
+                <input type="text" id="csubject" required>
+
+                <label for="cmessage">Message:</label>
+                <textarea id="cmessage" rows="5" required></textarea>
+
+                <button type="submit">Submit Inquiry</button>
+            </form>
+            <!-- Message box to display success/error without alerts -->
+            <div id="contactOutput" class="message-box hidden" aria-live="polite"></div>
+        </div>
+
+        <!-- Details Card -->
+        <div class="contact-details-card skill-card scroll-animate">
+            <h2 class="card-heading">My Digital Presence</h2>
+            
+            <div class="info-group">
+                <h3>Email</h3>
+                <p><a href="mailto:usaid.hussain.dev@example.com" class="neon-link">usaid.hussain.dev@example.com</a></p>
+            </div>
+
+            <div class="info-group">
+                <h3>LinkedIn (Corrected Link)</h3>
+                <p>
+                    <a href="https://www.linkedin.com/in/usaidhussain-usaid-h-509b81283" target="_blank" class="neon-link">
+                        <span class="link-icon">🔗</span> View My Professional Profile
+                    </a>
+                </p>
+            </div>
+            
+            <div class="info-group">
+                <h3>Location</h3>
+                <p>London, United Kingdom</p>
+            </div>
+
+            <div class="info-group">
+                <h3>Other Links</h3>
+                <ul class="styled-list">
+                    <li><a href="https://github.com/usaidhussain" target="_blank" class="neon-link">GitHub Profile</a></li>
+                    <li><a href="https://twitter.com/usaidhussain" target="_blank" class="neon-link">Twitter/X Feed</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<footer class="site-footer">
+<p>© 2025 Usaid Hussain | UsaidHussainDigital.com</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contactForm');
+    const contactOutput = document.getElementById('contactOutput');
+    const emailTo = "usaid.hussain.dev@example.com"; // The target email address
+
+    /**
+     * Helper function to show form feedback (success or error).
+     * @param {string} message - The HTML message content.
+     * @param {string} type - 'success' or 'error'.
+     */
+    function showFeedback(message, type) {
+        contactOutput.classList.remove('hidden', 'success', 'error', 'visible');
+        contactOutput.innerHTML = message;
+        contactOutput.classList.add(type, 'visible');
+        
+        // Hide the message after 8 seconds
+        setTimeout(() => {
+            contactOutput.classList.remove('visible');
+            setTimeout(() => contactOutput.classList.add('hidden'), 500); // Wait for transition
+        }, 8000);
+    }
+
+    // --- Form Submission Logic ---
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Simulate form data collection
+            const name = document.getElementById('cname').value;
+            const email = document.getElementById('cemail').value;
+            const subject = document.getElementById('csubject').value;
+            const message = document.getElementById('cmessage').value;
+
+            // Simple client-side validation check (already handled by 'required' attributes, but good practice)
+            if (!name || !email || !subject || !message) {
+                showFeedback("<strong>Error:</strong> Please fill in all required fields before submitting.", 'error');
+                return;
+            }
+
+            // In a real application, you would send this data to a server here.
+            // Since there is no backend, we simulate success after a small delay.
+            
+            // Disable button and show processing state
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate network delay (1.5 seconds)
+
+            // Construct the mailto link content
+            const mailtoSubject = encodeURIComponent(`Inquiry via Portfolio: ${subject}`);
+            const mailtoBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+            const mailtoLink = `mailto:${emailTo}?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+            const successMessage = `
+                <p>Thank you, <strong>${name}</strong>! Your inquiry has been received (Simulated Success). I will respond as soon as possible.</p>
+                <a href="${mailtoLink}" class="mail-link" target="_blank" aria-label="Send direct email to Usaid Hussain">
+                    Or Click Here to Send Direct Email
+                </a>
+            `;
+            
+            showFeedback(successMessage, 'success');
+
+            // Reset form and button state
+            contactForm.reset();
+            submitButton.disabled = false;
+            submitButton.textContent = 'Submit Inquiry';
+        });
+    }
+
+    // --- Scroll Animation Logic ---
+    const elements = document.querySelectorAll('.scroll-animate');
+
+    function checkVisibility() {
+        elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            // Check if the element is within the viewport (200px offset from the bottom)
+            if (rect.top < window.innerHeight - 100) {
+                element.classList.add('is-visible');
+            }
+        });
+    }
+
+    // Run on load and on scroll
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Initial check on load
+});
+</script>
+</body>
+</html>
+
+
+
+
 /**
  * Stylesheet: Enhanced, Vibrant, and Clean Layout
  * Palette: Charcoal (#141414), Bright Yellow (#FFD700), Neon Green (#39FF14)
