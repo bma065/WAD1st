@@ -4,7 +4,204 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Skills | Usaid Hussain</title>
-<link rel="stylesheet" href="styles.css">
+<!-- Embedded CSS for a single, self-contained file -->
+<style>
+/**
+ * Stylesheet: Enhanced Skills Page
+ * Palette: Charcoal (#141414), Bright Yellow (#FFD700), Neon Green (#39FF14), Pure Black (#000000)
+ */
+
+/* --- GLOBAL STYLES & FONT --- */
+body {
+    background-color: #141414; /* Deep Charcoal Background */
+    color: #E5E5E5; /* Light Grey for main content text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: #39FF14; /* Neon Green links */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #FFD700; /* Yellow hover effect */
+    text-decoration: underline;
+}
+
+h1, h2 {
+    color: #39FF14; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- TOP AND BOTTOM BANNERS (New) --- */
+.site-header, .site-footer {
+    background-color: #000000; /* Pure Black Banner */
+    color: #FFD700;
+    padding: 15px 20px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+/* --- NAVIGATION --- */
+.site-header {
+    border-bottom: 3px solid #39FF14;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center navigation links */
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: #FFD700; /* Navigation links are yellow */
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    color: #39FF14; /* Hover turns them green */
+}
+
+/* --- MAIN CONTENT WRAPPER (Centered) --- */
+.content-wrapper {
+    flex-grow: 1; 
+    max-width: 1000px; 
+    margin: 0 auto; /* Center the entire main content block */
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- PAGE TITLE SECTION --- */
+.skills-page-title {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.skills-page-title h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.8);
+}
+
+.skills-page-title p {
+    color: #FFD700;
+    font-size: 1.1em;
+}
+
+/* --- SKILLS GRID LAYOUT --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns for smaller cards */
+    }
+    .full-width {
+        grid-column: 1 / -1; /* Full width for the Technical Skills section */
+    }
+}
+
+/* --- CARD STYLING --- */
+.skill-card {
+    background-color: #1a1a1a; /* Dark card background */
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #FFD700; /* Yellow accent stripe */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card-heading {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Custom list styling */
+.styled-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.styled-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #282828;
+    color: #CFCFCF;
+}
+
+.styled-list li:last-child {
+    border-bottom: none;
+}
+
+/* --- SKILL BARS STYLING --- */
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    display: block;
+    font-weight: bold;
+    color: #FFD700; /* Yellow skill name */
+    margin-bottom: 5px;
+}
+
+.bar-outer {
+    background-color: #0d0d0d; /* Very dark background for the bar track */
+    border-radius: 10px;
+    height: 25px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.bar-inner {
+    height: 100%;
+    background: linear-gradient(90deg, #39FF14, #1D9B0D); /* Neon Green Gradient */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: #000;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: width 1s ease-out; /* Smooth animation effect */
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.7); /* Neon glow effect */
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #39FF14;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #FFD700;
+}
+</style>
 </head>
 <body>
 
@@ -40,11 +237,11 @@
                 <li>JavaScript Foundations Certificate – CodeCamp</li>
                 <li>Responsive Web Design Certificate – FreeCodeCamp</li>
                 
-                <!-- NEW Microsoft Office Certifications -->
+                <!-- Microsoft Office Certifications -->
                 <li>Cert Prep: **PowerPoint Associate** (Microsoft 365 Apps) - *LinkedIn Learning*</li>
                 <li>Cert Prep: **Outlook Associate** (Microsoft Office 2019/365) - *LinkedIn Learning*</li>
                 
-                <!-- NEW Excel Specializations -->
+                <!-- Excel Specializations -->
                 <li>Excel: **Introduction to Formulas and Functions** (2023) - *LinkedIn Learning*</li>
                 <li>Excel: **PivotTables for Beginners** - *LinkedIn Learning*</li>
                 <li>Excel: **Introduction to Charts and Graphs** - *LinkedIn Learning*</li>
@@ -69,7 +266,8 @@
                 <div class="skill-item">
                     <span class="skill-name">HTML5 / Semantic Markup</span>
                     <div class="bar-outer">
-                        <div class="bar-inner" style="width: 95%;">Advanced (95%)</div>
+                        <!-- Note: The percentage is used for the CSS width property -->
+                        <div class="bar-inner" style="width: 95%;">Advanced (95%)</div> 
                     </div>
                 </div>
 
@@ -97,7 +295,7 @@
                     </div>
                 </div>
                 
-                <!-- New Excel Skill Bar based on certificates -->
+                <!-- Excel Skill Bar based on certificates -->
                 <div class="skill-item">
                     <span class="skill-name">Microsoft Excel & Data Analysis</span>
                     <div class="bar-outer">
@@ -116,6 +314,5 @@
 <p>© 2025 Usaid Hussain | UsaidHussainDigital.com</p>
 </footer>
 
-<script src="java.js"></script>
 </body>
 </html>
